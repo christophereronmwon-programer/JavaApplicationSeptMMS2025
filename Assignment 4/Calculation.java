@@ -6,9 +6,9 @@ public class Calculation {
         Scanner input = new Scanner(System.in);
 
         int number;
-        int sum1 = 0;
-        int sum2 = 0;
-        int sum3 = 0;
+        int firstSum = 0;
+        int secondSum = 0;
+        int thirdSum = 0;
 
         
         for (int i = 1; i <= 10; i++) {
@@ -18,23 +18,23 @@ public class Calculation {
 
             
             if (i == 1 || i == 5 || i == 10) {
-                sum1 = sum1 + number;
+                firstSum += number;
             }
 
             if (i == 3 || i == 8 || i == 2) {
-                sum2 = sum2 + number;
+                secondSum += number;
             }
 
             
             if (i == 4 || i == 7 || i == 6 || i == 9) {
-                sum3 = sum3 + number;
+                thirdSum += number;
             }
         }
 
         
-        int product = sum1 * sum2;
+        int product = firstSum * secondSum;
 
-        int result = sum3 - product;
+        int result = thirdSum - product;
 
         System.out.println("Final Result = " + result);
 
