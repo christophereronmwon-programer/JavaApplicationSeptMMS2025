@@ -6,7 +6,7 @@ public class TabularOutput {
 
         for (int n = 1; n <= 5; n++) {
 
-            System.out.printf("%d %d %d %d%n"n,10 * n,100 * n,1000 * n);
+            System.out.printf("%d %d %d %d%n",n,10 * n,100 * n,1000 * n);
 			
         }
     }
