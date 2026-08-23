@@ -1,0 +1,35 @@
+package chapter13;
+import javax.swing.*;
+import java.util.Random;
+import java.awt.*;
+import java.awt.geom.*;
+import java.awt.event.*;
+
+public class ScreenSaverShapes extends JPanel implements ActionListener {
+    Random r = new Random();
+    javax.swing.Timer timer = new javax.swing.Timer(300, this);
+    int count;
+    ScreenSaverShapes() {
+        timer.start();
+    }
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        for (int i = 0; i < count; i ++ ) {
+            int x = r.nextInt(Math.max(1, getWidth() - 80)), y = r.nextInt(Math.max(1, getHeight() - 80)), w = 20 + r.nextInt(60), h = 20 + r.nextInt(60);
+            switch (r.nextInt(3)) {
+                case 0: g.drawRect(x, y, w, h);
+                break;
+                case 1: g.drawOval(x, y, w, h);
+                break;
+                default: g.drawLine(x, y, x + w, y + h);
+            }
+        }
+    }
+    public void actionPerformed(ActionEvent e) {
+        if ( ++ count > 100) count = 1;
+        repaint();
+    }
+    public static void main(String[] a) {
+        ConcentricCirclesArc.show("13.21", new ScreenSaverShapes(), 700, 450);
+    }
+}
