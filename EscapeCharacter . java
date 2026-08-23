@@ -1,0 +1,8 @@
+public class EscapeCharacter {
+    public static void main(String[] args) {
+        System.out.println("When you need to use escape characters:");
+        System.out.println("Use it when you want to manipulate your cursor.");
+        System.out.println("Use \\n when you want a newline.");
+        System.out.println("Who is the father of Java? The father of Java is \"James Gosling\".");
+    }
+}

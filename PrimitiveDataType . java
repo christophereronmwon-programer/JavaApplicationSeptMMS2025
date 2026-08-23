@@ -1,0 +1,6 @@
+private class PrimitiveDataType{
+	public static void main(String [] args) {
+		byte myAge = 30;
+		System.out.printf("Miss mercy is %d years old",myage)
+	}	
+}

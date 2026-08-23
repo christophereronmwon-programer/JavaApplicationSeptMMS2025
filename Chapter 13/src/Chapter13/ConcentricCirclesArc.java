@@ -1,0 +1,3 @@
+package chapter13;
+import javax.swing.*; import java.awt.*; import java.awt.geom.*; import java.awt.event.*; import java.util.*;
+public class ConcentricCirclesArc extends JPanel{protected void paintComponent(Graphics g){super.paintComponent(g);int cx=getWidth()/2,cy=getHeight()/2;for(int i=0;i<8;i++){int d=40+i*20;g.drawArc(cx-d/2,cy-d/2,d,d,0,360);}}public static void main(String[]a){show("13.6",new ConcentricCirclesArc(),400,400);}static void show(String t,JPanel p,int w,int h){JFrame f=new JFrame(t);f.add(p);f.setSize(w,h);f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);f.setLocationRelativeTo(null);f.setVisible(true);}}

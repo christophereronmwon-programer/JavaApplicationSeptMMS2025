@@ -1,0 +1,3 @@
+package chapter13;
+import javax.swing.*; import java.awt.*; import java.awt.geom.*; import java.awt.event.*; import java.util.*;
+public class ScreenSaverTimer extends JPanel implements ActionListener{Random r=new Random();Timer timer=new Timer(1000,this);ScreenSaverTimer(){timer.start();}protected void paintComponent(Graphics g){super.paintComponent(g);for(int i=0;i<100;i++)g.drawLine(r.nextInt(Math.max(1,getWidth())),r.nextInt(Math.max(1,getHeight())),r.nextInt(Math.max(1,getWidth())),r.nextInt(Math.max(1,getHeight())));}public void actionPerformed(ActionEvent e){repaint();}public static void main(String[]a){ConcentricCirclesArc.show("13.19",new ScreenSaverTimer(),700,450);}}
