@@ -4,7 +4,7 @@ package hospital.models;
 import java.time.LocalDate;
 
 public class Patient extends Person{
-    private String patientId; 
+    private int patientId; 
     private String bloodGroup;
     private String genotype;
     private String allergies;
@@ -15,7 +15,7 @@ public class Patient extends Person{
         
     }
 
-    public Patient(String patientId, 
+    public Patient(int patientId, 
             String bloodGroup, 
             String genotype, 
             String allergies, 
@@ -39,8 +39,12 @@ public class Patient extends Person{
         this.emergencyPhone = emergencyPhone;
     }
 
-    public String getPatientId() {
+    public int getPatientId() {
         return patientId;
+    }
+
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
     }
 
     public String getBloodGroup() {
